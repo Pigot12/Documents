@@ -1,0 +1,57 @@
+============================== CATCHER 2 LOG ==============================
+Crash occurred on 2024-08-03 21:57:11.163613
+
+------- DEVICE INFO -------
+
+------- APP INFO -------
+environment: release
+
+---------- ERROR ----------
+============================== CATCHER 2 LOG ==============================
+Crash occurred on 2024-08-03 21:57:11.2335---
+------- DEVICE INFO -------
+name: GNOME
+version: 44 (Flatpak runtime)
+id: org.gnome.Platform
+idLike: null
+versionCodename: null
+versionId: 44
+prettyName: GNOME 44 (Flatpak runtime)
+buildId: null
+variant: null
+variantId: null
+machineId: b0bbf05108ff496eb9d593f4274229b3
+
+------- APP INFO -------
+environment: release
+version: 3.4.0
+appName: spotube
+buildNumber: 27
+packageName: spotube
+
+---------- ERROR ----------
+PathNotFoundException: Cannot open file, path = '/home/asa/.var/app/com.github.KRTirtho.Spotube/config/dconf/user' (OS Error: No such file or directory, errno = 2)
+
+------- STACK TRACE -------
+#0      _checkForErrorResponse (dart:io/common.dart:55)
+#1      _File.open.<anonymous closure> (dart:io/file_impl.dart:381)
+<asynchronous suspension>
+#2      _File.readAsBytes.<anonymous closure> (dart:io/file_impl.dart:562)
+<asynchronous suspension>
+#3      GVariantDatabase._loadRootTable (package:gsettings/src/gvariant_database.dart:30)
+<asynchronous suspension>
+#4      GVariantDatabase.lookup (package:gsettings/src/gvariant_database.dart:20)
+<asynchronous suspension>
+#5      DConfClient.read (package:gsettings/src/dconf_client.dart:82)
+<asynchronous suspension>
+#6      GSettingsDConfBackend.get (package:gsettings/src/gsettings_dconf_backend.dart:23)
+<asynchronous suspension>
+#7      GSettings.get (package:gsettings/src/gsettings.dart:124)
+<asynchronous suspension>
+#8      getTheme (package:titlebar_buttons/src/get_theme.dart:12)
+<asynchronous suspension>
+#9      _RawDecoratedTitlebarButtonState.initState.<anonymous closure> (package:titlebar_buttons/src/decorated_button.dart:156)
+<asynchronous suspension>
+
+------- CUSTOM INFO -------
+======================================================================
